@@ -66,7 +66,7 @@ public class ruch : MonoBehaviour
                 coroutine = WaitRoEnableObject(skillParticles[skillNumber - 1], 2);
                 break;
             case 3:
-                coroutine = WaitRoEnableObject(skillParticles[skillNumber - 1], 2);
+                coroutine = WaitRoEnableObject(skillParticles[skillNumber - 1], 6);
                 break;
             case 4:
                 coroutine = WaitRoEnableObject(skillParticles[skillNumber - 1], 2);
