@@ -7,6 +7,8 @@ public class ruch : MonoBehaviour
     Animator animator;
     [SerializeField] GameObject[] skillParticles;
     private IEnumerator coroutine;
+    [SerializeField] AudioClip[] efekty;
+    [SerializeField] AudioSource zrudlo;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -53,10 +55,12 @@ public class ruch : MonoBehaviour
         }
 
     }
-    void UseSkill(int skillNumber)
+    public void UseSkill(int skillNumber)
     {
         animator.SetTrigger("skill" + skillNumber);
         skillParticles[skillNumber - 1].SetActive(true);
+        zrudlo.clip = efekty[skillNumber - 1];
+        zrudlo.Play();
         switch(skillNumber)
         {
             case 1:
